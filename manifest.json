@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Mode for Google Docs",
+  "version": "1.0.0",
+  "description": "A clean dark mode theme for Google Docs, Sheets, and Slides.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://docs.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/*"],
+      "css": [],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css"],
+      "matches": ["https://docs.google.com/*"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dark-mode-google-docs@extension",
+      "strict_min_version": "109.0"
+    }
+  }
+}

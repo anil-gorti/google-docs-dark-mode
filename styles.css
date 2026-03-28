@@ -1,0 +1,223 @@
+:root {
+  --dm-bg-primary: #1e1e1e;
+  --dm-bg-secondary: #252525;
+  --dm-bg-tertiary: #2d2d2d;
+  --dm-bg-surface: #333333;
+  --dm-text-primary: #e0e0e0;
+  --dm-text-secondary: #aaaaaa;
+  --dm-border: #444444;
+  --dm-accent: #8ab4f8;
+  --dm-hover: #3c3c3c;
+}
+
+/* ===== Global overrides ===== */
+html, body {
+  background-color: var(--dm-bg-primary) !important;
+  color: var(--dm-text-primary) !important;
+}
+
+/* ===== Top toolbar / menu bar ===== */
+.docs-titlebar-container,
+.docs-material-header,
+#docs-chrome,
+.docs-title-widget,
+.docs-menubar,
+.goog-toolbar,
+.docs-toolbar,
+.docs-toolbar-wrapper {
+  background-color: var(--dm-bg-secondary) !important;
+  color: var(--dm-text-primary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+.docs-menubar-menu,
+.goog-menubar {
+  background-color: var(--dm-bg-secondary) !important;
+}
+
+.docs-menubar .goog-control,
+.docs-menubar .goog-control-content {
+  color: var(--dm-text-primary) !important;
+}
+
+/* ===== Menu dropdowns ===== */
+.goog-menu,
+.goog-menuitem,
+.apps-menu-hide-mnemonics,
+.docs-menu-attached {
+  background-color: var(--dm-bg-tertiary) !important;
+  color: var(--dm-text-primary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+.goog-menuitem-highlight,
+.goog-menuitem:hover,
+.goog-option-selected {
+  background-color: var(--dm-hover) !important;
+}
+
+.goog-menuseparator {
+  border-color: var(--dm-border) !important;
+}
+
+/* ===== Document page / canvas area ===== */
+.docs-editor,
+.kix-appview-editor {
+  background-color: var(--dm-bg-primary) !important;
+}
+
+/* The actual page: keep it dark with light text */
+.kix-page,
+.kix-page-paginated {
+  background-color: var(--dm-bg-tertiary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+/* Page content area and paragraph text */
+.kix-page-content-wrapper {
+  background-color: var(--dm-bg-tertiary) !important;
+}
+
+/* ===== Canvas-rendered content (invert filter fallback) ===== */
+.kix-canvas-tile-content canvas {
+  filter: invert(0.85) hue-rotate(180deg) !important;
+}
+
+/* ===== Ruler ===== */
+.kix-ruler-container,
+.docs-ruler {
+  background-color: var(--dm-bg-secondary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+/* ===== Side panels & comments ===== */
+.docs-explore-widget,
+.docs-companion-panel,
+.docos-anchoredreplyview,
+.docos-docoview-tesla-conflict,
+.docos-anchoreddocoview {
+  background-color: var(--dm-bg-secondary) !important;
+  color: var(--dm-text-primary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+.docos-input-textarea,
+.docos-replyview-body {
+  background-color: var(--dm-bg-surface) !important;
+  color: var(--dm-text-primary) !important;
+}
+
+/* ===== Scrollbars ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dm-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dm-border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* ===== Dialogs / modals ===== */
+.modal-dialog,
+.docs-dialog,
+.apps-modaldialog {
+  background-color: var(--dm-bg-secondary) !important;
+  color: var(--dm-text-primary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+.docs-dialog .modal-dialog-title,
+.docs-dialog .modal-dialog-content {
+  color: var(--dm-text-primary) !important;
+}
+
+/* ===== Toolbar buttons & icons ===== */
+.goog-toolbar-button,
+.docs-toolbar-button,
+.goog-toolbar-menu-button {
+  color: var(--dm-text-primary) !important;
+}
+
+.goog-toolbar-button:hover,
+.docs-toolbar-button:hover,
+.goog-toolbar-menu-button:hover {
+  background-color: var(--dm-hover) !important;
+}
+
+/* ===== Tooltip ===== */
+.docs-tooltip,
+.goog-tooltip {
+  background-color: var(--dm-bg-surface) !important;
+  color: var(--dm-text-primary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+/* ===== Buttons in dialogs ===== */
+.goog-buttonset-default,
+.jfk-button-action {
+  background-color: var(--dm-accent) !important;
+  color: #1e1e1e !important;
+}
+
+/* ===== Status bar (bottom) ===== */
+.docs-material-mode-switcher,
+#docs-instant,
+.docs-statusbar-container {
+  background-color: var(--dm-bg-secondary) !important;
+  color: var(--dm-text-secondary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+/* ===== Find & replace bar ===== */
+.docs-findinput-container,
+.docs-findandreplace-container {
+  background-color: var(--dm-bg-secondary) !important;
+  color: var(--dm-text-primary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+.docs-findinput-input,
+.docs-findandreplace-input {
+  background-color: var(--dm-bg-surface) !important;
+  color: var(--dm-text-primary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+/* ===== Doc list / home page ===== */
+.docs-homescreen-grid-item,
+.docs-homescreen-list-item {
+  background-color: var(--dm-bg-tertiary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+.docs-homescreen-header,
+.docs-homescreen-templates-templateview {
+  background-color: var(--dm-bg-secondary) !important;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--dm-accent) !important;
+}
+
+/* ===== Inputs & selects ===== */
+input, select, textarea {
+  background-color: var(--dm-bg-surface) !important;
+  color: var(--dm-text-primary) !important;
+  border-color: var(--dm-border) !important;
+}
+
+/* ===== SVG icons: soften brightness ===== */
+.docs-icon-img,
+.docs-icon-img-container svg {
+  filter: invert(0.8) !important;
+}
